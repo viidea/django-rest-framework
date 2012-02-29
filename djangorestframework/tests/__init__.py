@@ -1,4 +1,5 @@
 """Force import of all modules in this package in order to get the standard test runner to pick up the tests.  Yowzers."""
+"""
 import os
 
 modules = [filename.rsplit('.', 1)[0]
@@ -11,3 +12,4 @@ for module in modules:
     exec("from djangorestframework.tests.%s import *" % module)
     __test__[module] = module_doc or ""
 
+"""
